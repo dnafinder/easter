@@ -24,13 +24,9 @@ function ED=easter(varargin)
 
 %Input Error handling
 p = inputParser;
-addOptional(p,'Y',year(now),@(x) isvector(x) && all(isnumeric(x)) && all(isreal(x)) && all(isfinite(x)) && all(fix(x)==x))
+addOptional(p,'Y',year(now),@(x) validateattributes(x,{'numeric'},{'row','real','finite','integer','nonnan','positive','>',33}))
 addOptional(p,'verbose',1,@(x) x==0 || x==1)
 parse(p,varargin{:});
-L=p.Results.Y-33;
-if L(L<0)
-    error('Warning: There is not Easter before Crucifixion of Jesus')
-end
 Y=p.Results.Y; verbose=logical(p.Results.verbose);
 
 %Now we are going to take the Moon into account. It appears to be so that
