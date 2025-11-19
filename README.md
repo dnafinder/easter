@@ -1,3 +1,5 @@
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=dnafinder/easter)
+
 ✝️ easter.m — MATLAB Easter Date Calculator (Gauss Algorithm, datetime version)
 
 easter.m is a MATLAB function that computes the date of Easter Sunday using the classical Gauss algorithm, including all necessary corrections for leap years, the Metonic cycle, and differences between Julian and Gregorian calendars.
